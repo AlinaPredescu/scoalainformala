@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <form>
+            <input name="subject" type="hidden" value="class" />
+            <fieldset><legend>Academic information</legend>
+                <label for="degree" >Degree</label>
+                    <select name="degree" id="degree">
+                    <option value="BA">Bachelor of Art</option>
+                    <option value="BS">Bachelor of Science</option>
+                    <option value="MBA" selected="selected">Master of Business Administration</option>
+                    </select> </br>
+                  <label for="Stdent ID">Student ID</label>
+                  <input type="text" id="Student ID">
+                  </br> 
+                  <label for="Classes attended">Classes attended</label>
+                  <select multiple>
+                      <option value="Geography">Geography</option>
+                      <option value="Mathematics">Mathematics</option>
+                      <option value="English">English</option>
+                  </select>
+             </fieldset>
+            
+            <fieldset><legend>Personal Details</legend>
+                <label for="First name">First name</label>
+                <input type="text" id="First name"> 
+                </br>
+                <label for="Last name">Last name</label>
+                <input type="text" id="Last name">
+                </br>
+                <label for="Gender">Gender</label>
+                <input type="radio" name="Gender" value="Male" >Male
+                <input type="radio" name="Gender" value="Female">Female
+                </br>
+                <label for="Email">Email</label>
+                <input type="text" id="Email">
+ 
+            </fieldset>  
+            
+            </br>
+                <textarea rows="5" cols="36">TERMS AND CONDITIONS... 
+                </textarea>
+            </br>
+            </br>
+            <button type="button">Send Form</button>
+            <button type="reset">Clear Form</button>
+            </form>
+            
+    </body>
+</html>
