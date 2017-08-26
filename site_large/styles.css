@@ -1,0 +1,45 @@
+header{
+    width: 40%;
+    height: 110px;
+    font-style:oblique;
+    font-size: 35px; 
+    background-color: #CCF47B;
+    color: #4E7500;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-top-left-radius: 15px;
+}
+
+.first{
+    width: 13%;
+    height: 500px;
+    color: blue;
+    background-color: #CCF47B;
+    float: right;
+    font-size: 18px;
+    margin-left: 1px;
+    margin-right: 200px; 
+    margin-top: 3px
+}
+
+#container{
+    margin-left: 405px
+}
+
+.butoane{
+margin-top: 2px;
+width: 108px;
+line-height: 35px;
+background-color: #FF7F50;
+border: none;
+color: white;
+text-decoration: underline;
+font-size: 10px;
+float:left;
+moz-transition: 1s linear;
+ms-transition: 1s linear;
+o-transition: 1s linear;
+webkit-transition: 1s linear;
+    transition: 1s linear;
+}

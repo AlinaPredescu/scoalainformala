@@ -1,0 +1,71 @@
+header{
+    width:100%; 
+    height:130px;
+    background:	#7FFF00;
+    border:1px  black;
+    text-align:right;
+    }
+
+.paragraf{
+ margin-right: 50px; 
+}
+
+.cap_tabel{
+    border-top-style: groove;
+    border-left-style: groove;
+    border-right-style: groove
+}
+
+#container {
+    background-color: 	white;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+.butoane{
+       background-color: #7FFF00;
+    border: none;
+    padding: 15px 32px;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: bold;
+    width: 250px;
+}
+
+.titlu{
+font-size: 25px;
+font-weight: bold;
+
+}
+
+.subcateg{
+    float: left;
+    margin:10px;
+    width: 45%;   
+}
+
+.button_subcateg{
+background: #7FFF00;
+ padding: 10px 25px;
+text-align: center;
+}
+
+footer{
+   width:100%; 
+    height:50px;
+    background:#7FFF00;
+    border:0px  black;
+    text-align:center;
+}
+
+#galeata{
+    background: white
+}
+
+#mare{
+    background: #F0E68C
+}
