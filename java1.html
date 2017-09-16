@@ -1,0 +1,177 @@
+<html>
+
+<head>
+    <script>
+        var a = 5;
+        var b = 6.100 + a;
+        var test = 10;
+        var anaAreMere = "Ana are mere";
+        var arr = [9, 5, 100];
+        var aRR = 100;
+        var n = null;
+        var casa = {
+            "etaje": 2,
+            "camere": 8,
+            "suprafata": 500,
+            "adresa": "strada..."
+        };
+        console.log(b);
+        console.log(anaAreMere + test);
+        console.log(arr[0]);
+        console.log(arr[3]);
+        console.log(arr.length);
+        console.log(n);
+        console.log(casa["etaje"]);
+        console.log(casa.etaje);
+
+        function inmultire(a, b) {
+            var c = a * b;
+            console.log(c)
+        }
+        inmultire(6, 5);
+
+
+        function scadere(a, b) {
+            var c = a - b;
+            return c;
+        }
+        console.log(scadere(6, 5));
+
+        arr = [9, 10, 11]
+        for (var i = 0; i < arr.length; i = i + 1)
+        { console.log(arr[i]) }
+
+        var i = 0
+        while (i < arr.length) {
+            console.log(arr[i]);
+            i = i + 1
+        }
+
+
+
+        function add() {
+            var s = 0
+            for (var i = 0; i < arguments.length; i++) {
+                s = s + arguments[i]
+            }
+        }
+
+        function multiply() {
+            var p = 1
+            for (var i = 0; i < arguments.length; i++) {
+                p = p * arguments[i];
+            }
+            return p;
+        }
+
+        function isPrime(n) {
+            for (var i = 2; i < n; i++) {
+                if (n % i == 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        isPrime(37);
+
+        function firstNrPrime(n) {
+            var nrFoundPrime = 0;
+            var currentNumber = 2;
+            while (nrFoundPrime < n) {
+                if (isPrime(currentNumber)) {
+                    nrFoundPrime++;
+                    console.log(currentNumber);
+                }
+                currentNumber++;
+            }
+        }
+
+        firstNrPrime(10);
+
+<!--O functie care compara 2 valori si returneaza true daca sunt egale si false daca nu sunt egale-- >
+
+            function comparareNumere(a, b) {
+                if (a == b) { return true } else { return false }
+
+            };
+        console.log(comparareNumere(2, 1));
+<!--O functie care compara 2 valori si returneaza - 1 daca primul e mai mic ca al doilea, 0 daca sunt egale si 1 daca primul e mai mare ca al doilea-- >
+
+            function comparareNumere2(a, b) {
+                if (a < b) { return -1 }
+                if (a == b) { return 0 }
+                if (a > b) { return 1 }
+            };
+
+        console.log(comparareNumere2(2, 1));
+
+<!--O functie care primeste 2 valori si returneaza maximul dintre cele 2-- >
+            function maxNumere(a, b) {
+                if (a > b) { return a }
+            };
+        console.log(maxNumere(7, 6));
+
+<!--O functie care primeste 2 valori si returneaza minimul dintre cele 2-- >
+            function minNumere(a, b) {
+                if (a < b) { return a }
+            };
+        console.log(minNumere(5, 6));
+
+<!--O functie care face suma dintre 2 valori-- >
+            function adunare(a, b) {
+                var c = a + b;
+                return c;
+            }
+        console.log(adunare(6, 5));
+
+<!--O functie care face diferenta dintre 2 valori-- >
+            function scadere(a, b) {
+                var c = a - b;
+                return c;
+            }
+        console.log(scadere(6, 5));
+
+<!--O functie care imparte 2 numere si returneaza rezultatul impartirii celor 2 numere (rezultatul trebuie sa fie integer -- > fara zecimale)-- >
+            function impartireInteger(a, b) {
+                var c = parseInt(a / b);
+                return c;
+            }
+        console.log(impartireInteger(12, 5));
+
+<!--O functie care imparte 2 numere si returneaza rezultatul impartirii celor 2 numere (rezultatul trebuie sa fie float -- > cu zecimale)-- >
+            function impartireFloat(a, b) {
+                c = parseFloat(a / b);
+                return c;
+            }
+        console.log(impartireFloat(2, 5));
+
+
+<!--O functie care imparte 2 numere si returneaza restul impartirii celor 2 numere (daca imparti 9 la 2, restul impartirii este 1, pentru 11 si 3, restul este 2, pentru 12 si 3 este 0)-- >
+            function rest(a, b) {
+                c = a % b;
+                return c;
+            }
+        console.log(rest(9, 2));
+
+
+<!--O functie care primeste un sir de caractere si returneaza lungimea sirului-->
+
+   function lungimeSir(a){
+       c=a.length;
+       return c;
+   }
+
+ console.log(lungimeSir("alina"));
+
+
+
+
+    </script>
+
+</head>
+
+<body>
+</body>
+
+</html>

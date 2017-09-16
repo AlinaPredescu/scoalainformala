@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+
+    <form id="myForm" onkeydown="keydown();" >
+        <input name="firstName" 
+        value="" 
+        type="text" 
+        placeholder="first name" 
+        
+        onkeyup="keyup();" 
+        onkeypress="keypress();"
+        onchange="change();"
+        oninput="input(event, this);"
+        /></br>
+
+
+        <input name="lastName" type="text" placeholder="last name"  oninput="input(event, this);"/></br>
+        <select name="age"></br>
+    <option value="0-7">0-7</option>
+    <option value="8-14">14-8</option>
+    <option value="15-18">15-18</option>
+    <option value="19-21">19-21</option>
+</select></br>
+        check me out:<input type="checkbox" value="test" /></br>
+        favorite band: </br>
+        <input type="radio" value="metallica" name="favoriteband" />Metallica</br>
+        <input type="radio" value="GNS" name="favoriteband" />GNS </br>
+        <input type="radio" value="Ozzy" name="favoriteband" />Ozzy </br>
+        <input type="radio" value="Vama" name="favoriteband" />Vama </br>
+
+    </form>
+
+    <p onmouseover="changeColor();" onmouseout="changeColor2();" id="paragraf">text ce va fi inlocuit de js</p>
+
+    <p id="paragraf">text ce va fi inlocuit de js</p>
+    <p id="altParagraf">text ce va fi inlocuit de js</p>
+
+    <div class="fancy">text1 </div>
+    <div class="fancy">text2 </div>
+
+    <script>
+        var firstNameElem = document.querySelector("#myForm [name=\"firstName\"]")
+
+        function keydown() {
+            console.log("keydown", firstNameElem.value);
+        }
+        function keyup() {
+            console.log("keyup", firstNameElem.value);
+        }
+        function keypress() {
+            console.log("keypress", firstNameElem.value);
+        }
+
+function change(){
+    console.log("change", firstNameElem.value);
+}
+
+function input(event, elem){
+    console.log("input", elem.value);
+}
+
+        function changeColor() {
+            document.getElementById("altParagraf").style.color = "red";
+        }
+
+        function changeColor2() {
+            document.getElementById("altParagraf").style.color = "blue";
+        }
+
+
+        document.getElementById("paragraf").innerHTML = "am inlocuit<br/> continut inlocuit";
+
+        document.getElementById("paragraf").style.color = "red";
+
+        document.getElementById("paragraf").style.color = "red";
+
+        document.getElementById("paragraf").style.backgroundColor = "#000000";
+
+        document.getElementById("altParagraf").innerText = "am inlocuit<br/> continut inlocuit";
+
+        var divurileMeleFancy = document.getElementsByClassName("fancy")
+        for (var i = 0; i < divurileMeleFancy.length; i++) {
+            divurileMeleFancy[i].innerHTML = divurileMeleFancy[i].innerHTML + "a mers";
+        }
+    </script>
+</body>
+
+</html>

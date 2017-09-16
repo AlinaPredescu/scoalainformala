@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+    <form id="myForm">
+        <input name="X" type="text" placeholder="X" oninput="adunare();" /></br>
+        <input name="Y" type="text" placeholder="Y" oninput="adunare();" /></br>
+
+    </form>
+
+    <p id="paragraf">
+    </P>
+
+    <script>
+        function adunare() {
+            var X = document.querySelector("#myForm [name=\"X\"]");
+            var Y = document.querySelector("#myForm [name=\"Y\"]");
+            var paragraf = document.querySelector("#paragraf");
+            paragraf.innerHTML = parseInt(X.value) + parseInt(Y.value)
+                  }
+    </script>
+
+//pot pune input id="suma" si in functie va fi suma.value=x+y//
+</body>
+
+</html>

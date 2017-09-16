@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+    <form id="myForm">
+        <input name="firstName" type="text" placeholder="first name" oninput="salut();" /></br>
+        <input name="lastName" type="text" placeholder="last name" oninput="salut();" /></br>
+
+        
+    </form>
+
+    <p id="paragraf"></P>
+
+    <script>
+        function salut() {
+            var firstName = document.querySelector("#myForm [name=\"firstName\"]");
+            var lastName = document.querySelector("#myForm [name=\"lastName\"]");
+            var paragraf = document.querySelector("#paragraf");
+            paragraf.innerHTML="salut "+firstName.value+ " "+lastName.value; 
+        }
+    </script>
+
+</body>
+
+</html>
+
