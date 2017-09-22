@@ -3,23 +3,16 @@
 
 <head>
     <link rel="stylesheet" href="styles.css">
-    <script>
-     function comparareInput([First_name, oras) {
-                if (First_name == oras) { return true } else { return false }
-
-            };
-        console.log(comparareInput(document.getElementById("input1"), document.getElementById("input2")));
-
-               </script>
+    <script src="script.js"></script>
 </head>
 
 <body>
     <div id="personale">
         </br>
-        First_name <input type="text" id="First name" placeholder="first name" id="input1">
+        First_name <input type="text" placeholder="first name" id="input1" oninput="comparareInput()"/>
         </br>
         </br>
-        Oras &nbsp &nbsp &nbsp &nbsp &nbsp<input type="text" id="oras" placeholder="Oras" id="input2">
+        Oras &nbsp &nbsp &nbsp &nbsp &nbsp<input type="text" id="input2" placeholder="Oras" oninput="comparareInput()"/>
         </br>
         </br>
     </div>
