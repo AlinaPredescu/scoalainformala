@@ -11,7 +11,7 @@
         <h1>Lista elevi</h1>
         <p class="borduri">
             Nume: <input id="inserari"  type="text" >
-            <button type="button" onclick="myFunction()">Adauga elev</button> </p>
+            <button type="button" onclick="myFunction(); creareButon()">Adauga elev</button> </p>
 
         <div class="borduri">
             <a class="button" onclick="sortAsc(note)">Sorteaza ascendent dupa medie note </a>
@@ -23,10 +23,12 @@
                 <tr>
                     <td width=33%>Nume</td>
                     <td width=33%>Medie note</td>
-                    <td width=33%><button type="button">Vezi notele</button>
+                    <td width=33%>
                     </td>
                 </tr>
             </table>
+
+           
         </div>
     </div>
 </body>
