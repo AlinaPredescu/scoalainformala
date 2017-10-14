@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="styles.css"></link>
+    <script src="script.js"></script>
+</head>
+
+<body bgcolor="#E6E6FA">
+    <div id="sablon">
+        <h1 STYLE="margin-left:30%">SHOPPING LIST</h1>
+        <input type="text" id="inserari" style="margin-left:25%"/> <button type="button" style="margin-left:20px;background-color:lightgreen" onclick="adaugareItem()">Add Item</button>
+        </br>
+        </br>
+        <button type="button" class="buton" onclick="sortAsc" style="margin-left: 25%;">Sort Asc </button> &nbsp
+        <button type="button" class="buton" onclick="sortDesc">Sort Desc </button>
+        </br>
+        <table id="myTable" style="margin-left:25%">
+            <tbody id="tb">
+                <tr>
+                    <td width=50% id="coloana">Item description</td>
+                    <td width=50% id="coloana"> &nbsp Action</td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

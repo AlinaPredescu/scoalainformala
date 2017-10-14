@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+</head>
+
+<body>
+    <script>
+        //maxim a n numere
+
+        function max(arr) {
+            var maxim = arr[0];
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i] > maxim) {
+                    maxim = arr[i];
+                }
+            }
+            return maxim;
+        }
+
+        console.log(max([7, 9, 3]));
+        //minim 
+        function aflaMinim(arr) {
+            var minim = arr[0];
+            for (var i = 0; i < arr.length; i++) {
+                if (minim > arr[i]) {
+                    minim = arr[i];
+                }
+            }
+            return minim;
+        }
+        console.log(aflaMinim([1, 2, 3]));
+
+        //media arirtmetica a unui sir de numere 7,9,3 
+
+        function ma(arr) {
+            var s = 0;
+            var nr = arr.length;
+            for (var i = 0; i < nr; i++) {
+                s = s + arr[i];
+            }
+            var medie = s / nr;
+            return medie;
+        }
+
+        console.log(ma([7, 9, 3]));
+
+        //produsul, a n numere
+
+        function produs(arr) {
+            var p = 1;
+            for (var i = 0; i < arr.length; i++) {
+                p = p * arr[i];
+            }
+            return p;
+        }
+
+        console.log(produs([7, 9, 3]));
+        //adunari
+        function adunare(a, b) {
+            var c = a + b;
+            return c;
+        }
+        console.log(adunare(1, 2));
+
+        function sum(arr) {
+            var suma = 0;
+            for (var i = 0; i < arr.length; i++) {
+                suma = suma + arr[i];
+            }
+            return suma;
+        }
+        console.log(sum([1, 2]));
+
+        //scadere
+        function scadere(a, b) {
+            var c = a - b;
+            return c;
+        }
+        console.log(scadere(3, 2));
+
+
+        function scade(arr) {
+            var minus = 0;
+            for (var i = 0; i < arr.length; i++) {
+                minus = -minus - arr[i];
+            }
+            return minus;
+        }
+        console.log(scade([7, 2]));
+
+
+        //impartire
+
+        function impartire(a, b) {
+            var c = a / b;
+            return c;
+        }
+        console.log(impartire(4, 2));
+
+        //rest
+
+        function rest(a, b) {
+            var c = a % b;
+            return c;
+        }
+        console.log(rest(4, 2));
+
+        //lungime sir
+
+        function lungime(a) {
+            var c = a.length;
+            return c;
+        }
+        console.log(lungime("alina"));
+        // functie care inverseaza un sir de caractere //
+
+        function inversSir(arr) {
+            var a = "";
+            for (var i = arr.length - 1; i >= 0; i--) {
+                a = a + arr[i];
+            }
+            return a
+        }
+
+        console.log(inversSir("asdf"));
+
+        //sau
+
+        function sirInvers(arr) {
+            a = "";
+            for (i = 0; i < arr.length; i++) {
+                a = a + arr[i];
+            }
+            return a;
+        }
+        console.log(inversSir("asdf"));
+
+        //pentru a verifica daca este palindrom mai intai ordonam sirul invers si apoi creem functia:
+
+        function palindrom(arr) {
+            a = "";
+            if (a == sirInvers(arr)) {
+                return "pal";
+            }
+            else {
+                return "nu este pal";
+            }
+        }
+        console.log(palindrom("abcba"));
+
+        function showData(ziua) {
+            var data = "";
+            for (i = 0; (i < ziua.length - 9); i++) {
+                data = data + ziua[i];
+            }
+            return data;
+        }
+
+        console.log(showData("2017-10-14 12:00:00"));
+
+        function showOra(ziua) {
+            var ora = "";
+            for (i = 0; i<ziua.length; i++) {
+                if(i>=(ziua.length-9)){
+                ora = ora + ziua[i];
+                }
+            }
+            return ora;
+        }
+
+        console.log(showOra("2017-10-14 12:00:00"));
+    </script>
+
+
+
+</body>
+
+</html>

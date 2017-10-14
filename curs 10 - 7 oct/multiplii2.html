@@ -1,0 +1,54 @@
+<html>
+    <head>
+    <script>     
+    
+    //calculeaza multiplii de 17
+    
+    function M17(nr){
+    
+         if (nr % 17 == 0){
+             return true;
+         }
+    else  {return false;
+    }
+    }
+    
+    //afiseaza multiplii intr-o lista
+    
+    function M17list(arr){
+        var list = [];
+        for (var i = 0; i < arr.length; i++){
+            if(M17(arr[i])){
+                list.push(arr[i]); //push este o functie de aceea avem "()"
+            }
+        }
+        return list;
+    }
+    var test = [1, 5, 17, 34];
+    var multiplii = M17list(test);
+    for(i = 0; i < multiplii.length; i++){
+        console.log(multiplii[i]);  //afiseaza fiecare multiplu din lista in parte, putem inlocui console log cu inner html
+    }
+
+    var s = 0;
+    var multiplii = M17list(test);
+    for(i = 0; i < multiplii.length; i++){
+    s = s + multiplii[i];
+    }
+    console.log(s);
+// media aritmetica
+    var ma = 0, s = 0;
+    var multiplii = M17list(test);
+    for (var i = 0; i < multiplii.length; i++){
+        s = s + multiplii[i];
+    }
+        ma = s/multiplii.length;
+    
+    console.log(ma);
+    
+    </script>
+    </head>
+    <body>
+    
+    </body>
+    </html>

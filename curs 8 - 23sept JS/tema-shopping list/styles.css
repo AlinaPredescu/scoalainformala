@@ -1,0 +1,20 @@
+.buton{
+    background-color: #DA81F5;    
+}
+
+#coloana{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#sablon{
+    background-color: white;
+    margin-left: 25%;
+    margin-right: 25%;
+    border-style: none;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+}
