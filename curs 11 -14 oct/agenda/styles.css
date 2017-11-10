@@ -1,0 +1,27 @@
+#titlu{
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+#contacte{
+    margin-left: 30%;
+    margin-right: 30%;
+    background-color: orange;
+    text-align: center;
+}
+
+.buton{
+    margin-left: 14%;
+    background-color: blue;
+    color: white;
+    width: 250px;
+    height: 35px;
+}
+
+#lista_contacte{
+    margin-left: 30%;
+    margin-right: 30%;
+    background-color: orange;
+    text-align: center;  
+}

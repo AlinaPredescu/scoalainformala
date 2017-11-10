@@ -25,10 +25,10 @@ function displayContacte(){
     var html = `
         <table id="myTable">
             <tr>
-                <td width=25%>Nume</td>
-                <td width=25%>Telefon</td>
-                <td width=25%></td>
-                <td width=25%></td>
+                <td width=25%><b>Nume</b></td>
+                <td width=25%><b>Telefon</b></td>
+                <td width=40%></td>
+                <td width=35%></td>
             </tr>
     `;
 
