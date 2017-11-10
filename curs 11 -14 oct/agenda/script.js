@@ -1,4 +1,5 @@
 var lista_contacte = [];
+var indexContactDeModificat=[];
 
 class Contact {
     constructor(pNume, pTelefon){
@@ -36,8 +37,8 @@ function displayContacte(){
         <tr>
             <td>${lista_contacte[i].nume}</td>
             <td>${lista_contacte[i].telefon}</td>
-            <td> <button onclick=" modificareNume()"> Modifica </button></td>
-            <td><button> Sterge </button></td>
+            <td> <button onclick="modificareContact(${i})"> Modifica </button></td>
+            <td><button onclick="stergeContact(${i})"> Sterge </button></td>
         </tr>`
     }
 
@@ -48,6 +49,24 @@ function displayContacte(){
     document.getElementById("lista_contacte").innerHTML=html;
 }
 
-function modificareNume() {
-    var nume = document.getElementById("inserariNume").innerHTML.value;
+
+function stergeContact(ContactDeSters){
+   lista_contacte.splice(ContactDeSters, 1);
+   displayContacte();
 }
+
+function modificareContact(indexContactDeModificat){
+    isOperatieDeModificare = true;
+    globalIndexContactDeModificat = indexContactDeModificat;
+    document.getElementById("inserariNume").value = lista_contacte[indexContactDeModificat].nume;
+    document.getElementById("inserariTelefon").value = lista_contacte[indexContactDeModificat].telefon;
+}
+
+function saveModificare() {
+    stergeContact(globalIndexContactDeModificat);
+    adaugaContact();
+    isOperatieDeModificare = false;
+}
+
+
+

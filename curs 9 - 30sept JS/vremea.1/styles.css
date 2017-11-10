@@ -1,0 +1,75 @@
+#input_wrapper{
+    background-color: white;
+    margin-top:2%;
+    margin-left: 2%;
+    margin-right: 2%;
+    border-style: none;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#oras{
+    width: 30%;
+}
+
+#buton{
+    height: 30px;
+    width: 25%;
+    font-size: 18px;
+    margin-left: 5%;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    background-color: blue;
+    color: white;
+    border-style: none;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+#oras{
+    height: 30px;
+    margin-left: 5%;
+}
+
+#vremea_wrapper{
+    background-color: white;
+    margin-top:2%;
+    margin-left: 2%;
+    margin-right: 2%;
+    border-style: none;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+#prognoza_wrapper{
+    background-color: white;
+    margin-top:2%;
+    margin-left: 2%;
+    margin-right: 2%;
+    border-style: none;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.margini{
+    margin-top:2%;
+    margin-left: 2%;
+    margin-right: 2%;  
+}
+
+.distanta{
+    margin-left: 2%;
+}
+
+#myTable{
+    margin-left: 2%;   
+}
