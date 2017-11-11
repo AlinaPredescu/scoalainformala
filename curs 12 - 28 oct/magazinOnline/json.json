@@ -1,0 +1,75 @@
+{
+    "produse": [
+        {
+            "pret": 100,
+            "nume": "tricou",
+            "url": "tricou.jpg",
+            "categorie": "tricou",
+            "stoc": 0,
+            "descriere":"tricou pictat manual, model la alegere.",
+            "specificatii": "se poate spala la masina, temperatura recomandata 30 grade, 800 rotatii, a nu se calca direct pe model."
+        },
+        {
+            "pret": 30,
+            "nume": "Workshop 1",
+            "url": "workshop.jpg",
+            "categorie": "workshop",
+            "stoc":0,
+            "descriere":"atelier de pictat pietre",
+            "specificatii": "vopsea, pietre"
+        },
+        {
+            "pret": "la cerere",
+            "nume": "Camera pictata  1",
+            "url": "perete.jpg",
+            "categorie": "perete",
+            "stoc":0,
+            "descriere":"pereti pictati manual",
+            "specificatii": "vopsea lavabila"
+        },
+        {
+            "pret": 5,
+            "nume": "Martisor",
+            "url": "martisor.jpg",
+            "categorie": "martisor",
+            "descriere":"1 martie",
+            "specificatii": "elemente naturale.",
+            "stoc":0
+        },
+        {
+            "pret": 100,
+            "nume": "tricou",
+            "url": "tricou.jpg",
+            "categorie": "tricou",
+            "stoc":0,
+            "descriere":"tricou pictat manual, model la alegere.",
+            "specificatii": "se poate spala la masina, temperatura recomandata 30 grade, 800 rotatii, a nu se  calca direct pe model."
+        },
+        {
+            "pret": 30,
+            "nume": "Workshop 1",
+            "url": "workshop.jpg",
+            "categorie": "workshop",
+            "stoc":0,
+            "descriere":"atelier de pictat pietre",
+            "specificatii": "vopsea, pietre"
+        },
+        {
+            "pret": "la cerere",
+            "nume": "Camera pictata  1",
+            "url": "perete.jpg",
+            "categorie": "perete",
+            "descriere":"pereti pictati manual",
+            "specificatii": "vopsea lavabila"
+        },
+        {
+            "pret": 5,
+            "nume": "Martisor",
+            "url": "martisor.jpg",
+            "stoc":0,
+            "categorie": "martisor",
+            "descriere":"1 martie",
+            "specificatii": "elemente naturale."
+        }
+    ]
+}

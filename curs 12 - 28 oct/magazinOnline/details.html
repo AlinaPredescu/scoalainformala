@@ -4,10 +4,10 @@
 <head>
     <title>BuBuzland</title>
     <link rel="stylesheet" href="styles.css"></link>
-    <script src="script.js"></script>
+    <script src="scriptDetalii.js"></script>
 </head>
 
-<body>
+<body  style="position:relative;padding-bottom:50px" onload="onLoad()">
     <header>
         </br>
         <p id="titlu"> <a href="index.html">Bubuzland </a> </p>
@@ -39,23 +39,23 @@
         </ul>
     </div>
 
-    <div class="containerDetails">
+    <div class="containerDetails" id="container_details">
 
-        <p class="titluDetails"> <b>Tricou alb</b>
+        <p class="titluDetails"> <b id="titlu_detalii"></b>
             </br>
-            100 RON
+           <span id="pret_detalii"> </span>
         </p>
         </br>
-        <img src="tricou.jpg" class="imagineDetails">
+        <img src="" class="imagineDetails" id="imagine_detalii">
         </br>
-        <div class="descriere">
-            <p>In stoc:</p>
-            Cantitate: <input type="text" style="width: 30px;"> &nbsp &nbsp <button >Adauga in cos</button>
+        <div class="descriere" id="descriere_detalii">
+            <p id="stoc">In stoc:</p>
+           <span id="cantitate"> Cantitate: <input type="text" style="width: 30px;"> </span> &nbsp &nbsp <button >Adauga in cos</button> 
             <p>
-                <u>Descriere:</u> tricou pictat manual, model la alegere.</p>
+                <u >Descriere:</u> <span id="descriere_child"></span>
+            </p>
             <p>
-                <u>Specificatii tehnice:</u> se poate spala la masina, temperatura recomandata 30 grade, 800 rotatii, a nu se
-                calca direct pe model.
+                <u >Specificatii tehnice:</u> <span id="specificatii"></span>
             </p>
             </br>
 

@@ -7,7 +7,7 @@
     <script src="script.js"></script>
 </head>
 
-<body>
+<body style="position:relative;padding-bottom:60px" onload="onLoad()">
     <header>
         </br>
         <p id="titlu"> <a href="index.html">Bubuzland </a> </p>
@@ -19,60 +19,30 @@
     </br>
     </br>
     </br>
+    </br>
     <button id="buton1"><a href="admin.html">Admin </a></button> <button id="buton2"><a href="cart.html">Cos de cumparaturi </a></button>
     </br>
-
+</br>
     <div id="meniu">
-        <button class="butoane" type="button"> Menu 1</button>
+        <button class="butoane" type="button"> <a href="index.html"> Produse </a> </button>
         <ul style="list-style-type:none">
-            <li>Tricouri</li>
-            <li>Ateliere</li>
-            <li>Pereti pictati</li>
-            <li>Martisoare</li>
-            <li>Item 5</li>
+            <li><button id="butonCategorie"><a href="index.html?categorie=tricou">Tricouri</a></button></li>
+            <li><button id="butonCategorie"><a href="index.html?categorie=workshop">Ateliere</a></button></li>
+            <li><button id="butonCategorie"><a href="index.html?categorie=perete">Pereti pictati</a></button></li>
+            <li><button id="butonCategorie"><a href="index.html?categorie=martisor">Martisoare</a></button></li>
+        
         </ul>
-        <button class="butoane" type="button"> Menu 2</button>
+        <button class="butoane" type="button"> Tips & Tricks</button>
         <ul style="list-style-type:none">
-            <li>Item 1</li>
-            <li>Item 2</li>
-            <li>Item 3</li>
+            <li>Articole</li>
+            <li>Video</li>
+            <li>Informatii utile</li>
+            <li>Despre mine</li>
         </ul>
     </div>
 
-    <div class="container">
-        <div class="child">
-            <p class="produs">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbspTricou pictat 1 </br>
-                <img src="tricou.jpg" class="imagine">
-                </br>
-                &nbsp &nbsp &nbsp Pret:100 RON &nbsp &nbsp &nbsp <button class="buton3" type="button"><a href="details.html">Detalii </a></button>
-            </p>
-        </div>
-
-        <div class="child">
-            <p class="produs">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Atelier 1 </br>
-                <img src="workshop.jpg" class="imagine">
-                </br>
-                &nbsp &nbsp &nbsp Pret:30 RON/pers &nbsp &nbsp &nbsp <button class="buton3" type="button"> <a href="details.html">Detalii </a></button>
-            </p>
-        </div>
-
-        <div class="child">
-            <p class="produs">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Camera pictata 1 </br>
-                <img src="perete.jpg" class="imagine">
-                </br>
-                &nbsp &nbsp &nbsp Pret:la cerere &nbsp &nbsp &nbsp <button class="buton3" type="button"> <a href="details.html">Detalii </a></button>
-            </p>
-        </div>
-
-        <div class="child">
-            <p class="produs">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Martisor 1 </br>
-                <img src="martisor.jpg" class="imagine">
-                </br>
-                &nbsp &nbsp &nbsp Pret:5 RON &nbsp &nbsp &nbsp <button class="buton3" type="button"> <a href="details.html">Detalii </a></button>
-            </p>
-        </div>
-
-
+    <div class="container" id="container_produse">
+       
 
     </div>
 
