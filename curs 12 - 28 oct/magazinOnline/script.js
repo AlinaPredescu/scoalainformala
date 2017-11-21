@@ -22,7 +22,7 @@ function drawProduse(list){
         if(categorie === undefined || categorie===produs.categorie){
             str += `
                 <div class="child">
-                <p class="produs">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp ${produs.nume} </br>
+                <p class="produs"> ${produs.nume} </br>
                     <img src="${produs.url}" class="imagine">
                     </br>
                     &nbsp &nbsp &nbsp Pret:${produs.pret} RON &nbsp &nbsp &nbsp <button class="buton3" type="button">

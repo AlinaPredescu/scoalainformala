@@ -7,7 +7,7 @@
     <script src="scriptDetalii.js"></script>
 </head>
 
-<body  style="position:relative;padding-bottom:50px" onload="onLoad()">
+<body style="position:relative;padding-bottom:50px" onload="onLoad()">
     <header>
         </br>
         <p id="titlu"> <a href="index.html">Bubuzland </a> </p>
@@ -19,23 +19,24 @@
     </br>
     </br>
     </br>
-    <button id="buton2"><a href="cart.html">Cos de cumparaturi </a></button>
+    </br>
+    <button id="buton2" onclick="displayProdus()"><a href="cart.html">Cos de cumparaturi </a></button>
     </br>
 
     <div id="meniu">
-        <button class="butoane" type="button"> Menu 1</button>
+        <button class="butoane" type="button"><a href="index.html"> Produse</a></button>
         <ul style="list-style-type:none">
-            <li>Tricouri</li>
-            <li>Ateliere</li>
-            <li>Pereti pictati</li>
-            <li>Martisoare</li>
-            <li>Item 5</li>
+            <li><button id="butonCategorie"><a href="index.html?categorie=tricou">Tricouri</a></button></li>
+            <li><button id="butonCategorie"><a href="index.html?categorie=workshop">Ateliere</a></button></li>
+            <li><button id="butonCategorie"><a href="index.html?categorie=perete">Pereti pictati</a></button></li>
+            <li><button id="butonCategorie"><a href="index.html?categorie=martisor">Martisoare</a></button></li>
         </ul>
-        <button class="butoane" type="button"> Menu 2</button>
+        <button class="butoane" type="button"> Tips & Tricks</button>
         <ul style="list-style-type:none">
-            <li>Item 1</li>
-            <li>Item 2</li>
-            <li>Item 3</li>
+            <li>Articole</li>
+            <li>Video</li>
+            <li>Informatii utile</li>
+            <li>Despre mine</li>
         </ul>
     </div>
 
@@ -43,19 +44,19 @@
 
         <p class="titluDetails"> <b id="titlu_detalii"></b>
             </br>
-           <span id="pret_detalii"> </span>
+            <span id="pret_detalii"> </span> Lei
         </p>
         </br>
         <img src="" class="imagineDetails" id="imagine_detalii">
         </br>
         <div class="descriere" id="descriere_detalii">
-            <p id="stoc">In stoc:</p>
-           <span id="cantitate"> Cantitate: <input type="text" style="width: 30px;"> </span> &nbsp &nbsp <button >Adauga in cos</button> 
+            <p> In stoc: <span id="stoc"></span></p>
+            <span id="cantitate"> Cantitate: <input type="text" style="width: 30px;"> </span> &nbsp &nbsp <button onclick="adaugaProdus()">Adauga in cos</button>
             <p>
-                <u >Descriere:</u> <span id="descriere_child"></span>
+                <u>Descriere:</u> <span id="descriere_child"></span>
             </p>
             <p>
-                <u >Specificatii tehnice:</u> <span id="specificatii"></span>
+                <u>Specificatii tehnice:</u> <span id="specificatii"></span>
             </p>
             </br>
 
