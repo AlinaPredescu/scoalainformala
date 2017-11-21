@@ -53,8 +53,11 @@ function adaugaProdus() {
 
     var c = new produs(adaugaNume, adaugaPret, adaugaCantitate, calculeazaSubTotal);
 
-    makePutFirebase("https://magazinonlinealina1.firebaseio.com/shoppingCart.json",c);
-
+    if(adaugaCantitate<=parseInt(document.getElementById("stoc").innerHTML)){
+        makePutFirebase("https://magazinonlinealina1.firebaseio.com/shoppingCart.json",c);
+    } else {
+        alert("Stoc insuficient");
+    }
 }
 
 function makePutFirebase(url,produs){
