@@ -1,6 +1,25 @@
+function makeGetFirebase(url){
+    
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+              // Typical action to be performed when the document is ready:
+              var c = JSON.parse(xhttp.responseText)
+                drawCos(c);
+    
+          }
+      };
+      xhttp.open("GET", url, true);
+      xhttp.send();
+    }
 
-function displayProdus(){
+
+var lista_produse=[];
+
+function drawCos(lista_produse){
+     
     var html = `
+
     <table id="myTable">
     <tr>
         <td width=30%>Nume</td>
@@ -10,16 +29,11 @@ function displayProdus(){
         <td width=10%>Sub total</td>
         <td width=10%></td>
     </tr>
-</table>
     `;
 
-var i;
-var shoppingCart=https://magazinonlinealina1.firebaseio.com/shoppingCart
-
-
-    for (i in shoppingCart) { 
+for (var i in lista_produse){
         html= html + `
-        <tr>
+            <tr>
             <td>${lista_produse[i].nume}</td>
             <td>${lista_produse[i].pret}</td>
             <td><button onclick="scadeCantitate(${i})"> - </button></td>
@@ -27,9 +41,10 @@ var shoppingCart=https://magazinonlinealina1.firebaseio.com/shoppingCart
             <td><button onclick="cresteCantitate(${i})"> + </button></td>
             <td>${lista_produse[i].subTotal}</td>
             <td><button onclick="stergeProdus(${i})"> Sterge </button></td>
-        </tr>`
-    }
+                    </tr>`
 
+
+    }
     html = html + `
         </table>
     `;
@@ -38,6 +53,8 @@ var shoppingCart=https://magazinonlinealina1.firebaseio.com/shoppingCart
 }
 
 
+makeGetFirebase("https://magazinonlinealina1.firebaseio.com/shoppingCart.json");
+
 function stergeProdus(produsDeSters){
     lista_produse.splice(produsDeSters, 1);
     displayProdus();
@@ -45,12 +62,16 @@ function stergeProdus(produsDeSters){
 
 
   function cresteCantitate() {
-     var c = document.getElementById("cantitate").value + 1;
+     var c = document.getElementById("cantitate").innerHTML + 1;
      return c;
  }
 
  function scadeCantitate() {
-     var c = document.getElementById("cantitate").value - 1;
+     var c = document.getElementById("cantitate").innerHTML - 1;
      return c;
  }
 
+
+
+ /*var count = Object.keys("https://magazinonlinealina1.firebaseio.com/shoppingCart.json").length;
+ console.log(count);*/

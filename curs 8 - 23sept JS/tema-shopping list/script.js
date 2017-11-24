@@ -19,6 +19,9 @@ function creareButon(row) {
     var numeBtn=document.createTextNode("Mark as buyed");
     buton.appendChild(numeBtn);
     cell.appendChild(buton);
+    buton.addEventListener("click", function(){
+
+    })
 }
 
     //nu stiu cum sa folosesc mai departe butonul creat - sa ii pun onclick => strikethrough

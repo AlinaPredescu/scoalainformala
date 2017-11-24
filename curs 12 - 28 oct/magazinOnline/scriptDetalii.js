@@ -1,12 +1,12 @@
-function makeGetFirebase(url){
+function makeGetFirebase(url, callBack){
     
       var xhttp = new XMLHttpRequest();
       xhttp.onreadystatechange = function() {
           if (this.readyState == 4 && this.status == 200) {
               // Typical action to be performed when the document is ready:
               var c = JSON.parse(xhttp.responseText)
-                drawDetalii(c);
-    
+             
+    callBack(c);
           }
       };
       xhttp.open("GET", url, true);
@@ -24,17 +24,24 @@ function drawDetalii(detalii){
     document.getElementById("specificatii").innerHTML=detalii.specificatii;
 }
 
-
+function updateCos(lista_produse){
+    var s=0;
+    for (var i in lista_produse){
+        s+=lista_produse[i].cantitate;
+    
+    }
+    document.getElementById("buton2").innerHTML=s + " produse in cos";
+}
 
 function onLoad(){
     var idProdus = window.location.search.split("=")[1];
     //var idProdus = window.location.search.substring(10)
     //window.location.search.substring("?idProdus=".length)
-    makeGetFirebase("https://magazinonlinealina1.firebaseio.com/produse/"+idProdus+".json");
-    //https://magazinonlinealina1.firebaseio.com/produse/1
+    makeGetFirebase("https://magazinonlinealina1.firebaseio.com/produse/"+idProdus+".json", drawDetalii);
+ 
+    makeGetFirebase("https://magazinonlinealina1.firebaseio.com/shoppingCart.json", updateCos);
 }
 
-var lista_produse=[];
 
 class produs {
     constructor(pNume,pPret, pCantitate, pSubTotal){
@@ -52,11 +59,10 @@ function adaugaProdus() {
     var calculeazaSubTotal= adaugaCantitate*adaugaPret;
 
     var c = new produs(adaugaNume, adaugaPret, adaugaCantitate, calculeazaSubTotal);
-
-    if(adaugaCantitate<=parseInt(document.getElementById("stoc").innerHTML)){
+    if(adaugaCantitate>0 && adaugaCantitate<=parseInt(document.getElementById("stoc").innerHTML)){
         makePutFirebase("https://magazinonlinealina1.firebaseio.com/shoppingCart.json",c);
     } else {
-        alert("Stoc insuficient");
+        alert("Verificati cantitatea introdusa!");
     }
 }
 
@@ -74,3 +80,8 @@ function makePutFirebase(url,produs){
       xhttp.open("POST", url, true);
       xhttp.send(JSON.stringify(produs));
     }
+
+
+
+
+   
