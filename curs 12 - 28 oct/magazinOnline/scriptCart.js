@@ -57,7 +57,7 @@ makeGetFirebase("https://magazinonlinealina1.firebaseio.com/shoppingCart.json");
 
 function stergeProdus(produsDeSters){
     lista_produse.splice(produsDeSters, 1);
-    displayProdus();
+    drawCos();
  }
 
 
