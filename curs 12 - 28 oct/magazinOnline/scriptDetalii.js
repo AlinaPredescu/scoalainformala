@@ -44,11 +44,12 @@ function onLoad(){
 
 
 class produs {
-    constructor(pNume,pPret, pCantitate, pSubTotal){
+    constructor(pNume,pPret, pCantitate, pSubTotal, pIdProdus){
         this.nume=pNume;
         this.pret=pPret;
         this.cantitate=pCantitate;
-        this.subTotal=pSubTotal
+        this.subTotal=pSubTotal;
+        this.idProdus=pIdProdus
     }
 }
 
@@ -57,8 +58,8 @@ function adaugaProdus() {
     var adaugaPret = parseInt(document.getElementById("pret_detalii").innerHTML);
     var adaugaCantitate= parseInt(document.querySelector("#cantitate input").value);
     var calculeazaSubTotal= adaugaCantitate*adaugaPret;
-
-    var c = new produs(adaugaNume, adaugaPret, adaugaCantitate, calculeazaSubTotal);
+    var idProdus = window.location.search.split("=")[1];
+    var c = new produs(adaugaNume, adaugaPret, adaugaCantitate, calculeazaSubTotal, idProdus);
     if(adaugaCantitate>0 && adaugaCantitate<=parseInt(document.getElementById("stoc").innerHTML)){
         makePutFirebase("https://magazinonlinealina1.firebaseio.com/shoppingCart.json",c);
     } else {

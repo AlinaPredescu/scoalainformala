@@ -108,3 +108,32 @@ header{
     border-style: none;
     text-decoration-color: white;
 }
+
+#myTable {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 60%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.butonCantitate{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 30px;
+    color: blue;
+    font-weight: bold;
+}
+
