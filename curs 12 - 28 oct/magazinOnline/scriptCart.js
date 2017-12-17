@@ -1,12 +1,12 @@
-function makeGetFirebase(url){
+function makeGetFirebase(url, callBack){
     
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             // Typical action to be performed when the document is ready:
             var c = JSON.parse(xhttp.responseText)
-            drawCos(c);
 
+            callBack(c);
         }
     };
     xhttp.open("GET", url, true);
@@ -18,7 +18,7 @@ function makeDeleteFirebase(url){
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             // Typical action to be performed when the document is ready:
-            makeGetFirebase("https://magazinonlinealina1.firebaseio.com/shoppingCart.json");
+            makeGetFirebase("https://magazinonlinealina1.firebaseio.com/shoppingCart.json",drawCos);
 
         }
     };
@@ -32,7 +32,7 @@ function makePutFirebase(url, cantitate){
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             // Typical action to be performed when the document is ready:
-            makeGetFirebase("https://magazinonlinealina1.firebaseio.com/shoppingCart.json");
+            makeGetFirebase("https://magazinonlinealina1.firebaseio.com/shoppingCart.json",drawCos);
 
         }
     };
@@ -87,7 +87,7 @@ total+=lista_produse[i].cantitate*lista_produse[i].pret
 }
 
 
-makeGetFirebase("https://magazinonlinealina1.firebaseio.com/shoppingCart.json");
+makeGetFirebase("https://magazinonlinealina1.firebaseio.com/shoppingCart.json",drawCos);
 
 function stergeProdus(produsDeSters){
     makeDeleteFirebase("https://magazinonlinealina1.firebaseio.com/shoppingCart/"+produsDeSters+".json");
@@ -126,16 +126,17 @@ function verificaStoc(url,idCantitate,cantitate){
         }
     }
 
-    function updateCos(lista_produse){
-        var s=0;
-        for (var i in lista_produse){
-            s+=lista_produse[i].cantitate;
-        
-        }
-        document.getElementById("buton2").innerHTML=s + " produse in cos";
-    }
 
-    function sumaSubtotal(){
+function updateCos(lista_produse){
+    var s=0;
+    for (var i in lista_produse){
+        s+=lista_produse[i].cantitate;
 
     }
+    document.getElementById("buton2").innerHTML=s + " produse in cos";
+}
+
+function onLoad(){
+    makeGetFirebase("https://magazinonlinealina1.firebaseio.com/shoppingCart.json", updateCos);
+}
 

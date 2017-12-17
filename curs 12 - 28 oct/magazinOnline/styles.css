@@ -102,7 +102,7 @@ header{
     margin-bottom: 5px;
 }
 
-#butonCategorie{
+.butonCategorie{
     background-color: white;
     border-color: white;
     color: black;
