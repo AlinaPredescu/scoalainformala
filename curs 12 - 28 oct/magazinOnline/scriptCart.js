@@ -137,6 +137,7 @@ function updateCos(lista_produse){
 }
 
 function onLoad(){
+    //cand se incarca pagina
     makeGetFirebase("https://magazinonlinealina1.firebaseio.com/shoppingCart.json", updateCos);
 }
 
