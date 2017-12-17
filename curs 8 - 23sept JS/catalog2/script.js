@@ -48,7 +48,7 @@ document.getElementById("lista_elevi").innerHTML = htmlElevi;
         // pas 2 - compunem html ul cu notele elevului
         var htmlNote = "";
         for(var i = 0; i< NoteElev.length; i++){
-            htmlNote = htmlNote + NoteElev[i] + "</br>";
+            htmlNote = htmlNote + NoteElev[i] + "<br/>";
         
         }
 

@@ -6,7 +6,7 @@ function makeGetFirebase(url, callBack){
               // Typical action to be performed when the document is ready:
               var c = JSON.parse(xhttp.responseText)
              
-    callBack(c);
+            callBack(c);
           }
       };
       xhttp.open("GET", url, true);
@@ -75,7 +75,7 @@ function makePutFirebase(url,produs){
               // Typical action to be performed when the document is ready:
               var c = JSON.parse(xhttp.responseText)
             console.log(c);
-    
+              makeGetFirebase("https://magazinonlinealina1.firebaseio.com/shoppingCart.json", updateCos);
           }
       };
       xhttp.open("POST", url, true);
