@@ -1,0 +1,315 @@
+<html>
+
+<head>
+    <script>
+        /*1. Implementati o functie JavaScript care primeste ca si parametru un numar si returneaza true daca numarul este par si fals daca este impar.*/
+
+        function isImpar(n) {
+            if (n % 2 == 1) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        console.log(isImpar(7));
+
+
+        /*2.Implementati o functie JavaScript care primeste 2 parametri(a,b) si returneaza maximul dintre cei 2
+        */
+
+        function max(a, b) {
+            if (a > b) {
+                return a;
+            } else { return b; }
+        }
+
+        console.log(max(4, 5));
+
+        /*3. Implementati o functie JavaScript care primeste ca si parametru un array(sir de numere) si returneaza maximul din acel array.
+*/
+        function maxArr(arr) {
+            var maxim = arr[0];
+            for (var i = 1; i < arr.length; i++) {
+                if (maxim < arr[i]) {
+                    maxim = arr[i]
+                }
+            }
+            return maxim;
+        }
+
+        console.log(maxArr([4, 6, 5]));
+
+        /* 4. Implementati o functie JavaScript care primeste 2 parametri(a,b) si returneaza suma lor.*/
+
+        function suma(a, b) {
+            var c = a + b;
+            return c;
+        }
+
+        console.log(suma(6, 5));
+
+        /*5.Implementati o functie JavaScript care primeste ca si parametru un array(sir de numere) si returneaza suma tuturor numerelor din acel array.*/
+
+        function sumaArr(arr) {
+            var a = 0;
+            for (var i = 0; i < arr.length; i++) {
+                a = a + arr[i];
+            }
+            return a;
+        }
+
+        console.log(sumaArr([6, 6]));
+
+        /*6.Implementati o functie JavaScript care primeste 2 parametri(a,b) si returneaza produsul lor.*/
+
+        function produs(a, b) {
+            var c = a * b;
+            return c;
+        }
+
+        console.log(produs(6, 5));
+
+        /*7.Implementati o functie JavaScript care primeste ca si parametru un array(sir de numere) si returneaza produsul tuturor numerelor din acel array.*/
+        function produsArr(arr) {
+            var a = 1;
+            for (var i = 0; i < arr.length; i++) {
+                a = a * arr[i];
+            }
+            return a;
+        }
+
+        console.log(produsArr([6, 6]));
+
+        /*8.Implementati o functie JavaScript care primeste ca si parametru un array(sir de numere) si returneaza media 
+        aritmetica a lor(suma numerelor / nr elementelor).*/
+
+        function average(arr) {
+            var a = 0;
+            for (var i = 0; i < arr.length; i++) {
+                a = (a + arr[i]);
+            }
+            return a / arr.length;
+        }
+
+        console.log(average([6, 6]));
+
+        /*9.Implementati o functie JavaScript care primeste ca si parametru un string si returneaza numarul de caractere 
+        din acel string.*/
+
+        function lungimeSir(a) {
+            c = a.length;
+            return c;
+        }
+
+        console.log(lungimeSir("alina"));
+
+        /* 10. Implementati o functie JavaScript care primeste ca si parametru un string si returneaza un nou string in care 
+        ordinea literelor este inversata(ex: revert("abc") va returna "cba") */
+
+        function sir(a) {                                      // un singur parametru pentru ca e tot sirul 
+            var b = "";
+            for (var i = a.length - 1; i >= 0; i--) {               //lungimea sirului a scade cu 1
+                b = b + a[i];                                     // i-ul este pozitia 
+            }
+            return b;
+        }
+        console.log(sir("abc"));
+
+
+        function sir2(a) {
+            var b = "";
+            for (var i = 0; i < a.length; i++) {
+                b = a[i] + b;
+            }
+            return b;
+        }
+        console.log(sir2("abc"));
+
+        /* 11. Implementati o functie JavaScript care primeste ca si parametru un numar si returneaza inversul sau.
+        (ex: revert(123) va returna 321)  */
+
+function revert(a){
+    a=a+"";
+    b="";
+    for (var i = 0; i < a.length; i++) {
+                b = a[i] + b;
+            }
+            return parseInt(b); 
+}
+
+console.log(revert(123));
+        /*12. Implementati o functie JavaScript care primeste ca si parametru un numar si returneaza true sau false daca 
+        numarul este palindrom.(palindron este un numar care este egal cu inversul sau. ex: 121, 12321, 1122332211)*/
+
+        function p1(a) {
+            if (a == sir2(a)) {
+                return "palindrom";
+            }
+            else {
+                return "nu Palindrom";
+            }
+        }
+        console.log(p1("121"));
+
+        function palindrom(a) {
+            var b = a + "";
+            var invers = "";
+            for (var i = 0; i < b.length; i++) {
+                invers = b[i] + invers;
+            }
+            if (b === invers) {
+                return true;
+            } else { return false; }
+        }
+
+        console.log(palindrom("121"));
+
+        /*13. Implementati o functie JavaScript care primeste ca si parametru un array(sir de string-uri) si returneaza un alt 
+        array ce are toate string-urile scrise cu litere mari.(ex: capitalize(['a','abc','dEF']) va returna ['A', 'ABC', 'DEF'])*/
+
+        function uppercase(arr) {
+            for (var i = 0; i < arr.length; i++) {
+                arr[i] = arr[i].toUpperCase();
+            }
+            return arr;
+        }
+
+        console.log(uppercase(['a', 'abc', 'dEF']));
+
+
+        /*14.Implementati o functie JavaScript care primeste ca si parametru un array(sir de numere) si returneaza un alt array ce 
+        contine doar numerele pare.*/
+
+        function pare(arr) {
+            a = [];
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i] % 2 == 0) { a.push(arr[i]) }
+            }
+            return a;
+        }
+
+        console.log(pare([1, 2, 3, 6]));
+
+        /*15. Implementati o functie JavaScript care primeste ca si parametru un array(sir de string-uri) si returneaza un alt 
+        array ce contine doar string-urile care incep cu litera 'a'. (ex filter(['aBc', 'ADF', 'ana are mere', 'gigel', 'BCD', 
+        'abcd'] va returna ['aBc', 'ADF', 'ana are mere', 'abcd'])*/
+
+        function functieA(arr) {
+            a = [];
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i][0] == "a" || arr[i][0] == "A") { a.push(arr[i]) }
+            }
+            return a;
+        }
+
+        console.log(functieA(['aBc', 'ADF', 'ana are mere', 'gigel', 'BCD', 'abcd']));
+
+        /* 16.Scrietei o functie JavaScript care primeste ca si parametru un array(sir de numere) si returneaza un alt array ce 
+        contine doar numerele care sunt palindrom. (ex: filter([1, 12, 121, 123, 12321]) va returna [1, 121, 12321])*/
+
+        function functiePalindrom(arr) {
+            a = [];
+            for (var i = 0; i < arr.length; i++) {
+                if (palindrom(arr[i])) { a.push(arr[i]) }
+            }
+            return a;
+        }
+
+        console.log(functiePalindrom([1, 12, 121, 123, 12321]));
+
+
+        /*17. Implementati o functie JavaScript care primeste ca si parametru un array(sir de numere) si returneaza un nou array 
+        ce va contine numerele ordonate crescator(ex: sort([3,4,2,1]) va returna [1,2,3,4])*/
+
+        function sort(arr) {
+            return arr.sort();
+        }
+
+        console.log(sort([3, 4, 2, 1]));
+
+        function sort1(arr) {
+            b = [];
+            for (var i = 0; i < arr.length; i++) { b[i] = arr[i] }
+
+            return b.sort();
+        }
+
+        console.log(sort1([3, 4, 2, 1]));
+
+
+        /*18.Implementati o functie de JavaScript care face o cerere AJAX catre url-ul: 
+        https://jsonplaceholder.typicode.com/posts/1/comments si afiseaza la consola email-urile primite.*/
+
+        function getEmails() {
+            var URL = "https://jsonplaceholder.typicode.com/posts/1/comments";
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    var json = JSON.parse(this.responseText);
+                    json.forEach((e) => console.log(e.email))
+                }
+            };
+            xhttp.open("GET", URL, true);
+            xhttp.send();
+        }
+
+        getEmails();
+
+        /* 19. Implementati o functie de JavaScript care face o cerere AJAX catre url-ul:
+         https://jsonplaceholder.typicode.com/posts/1/comments si afiseaza adresele de email in browser intr-un tabel.*/
+
+        function getEmails1() {
+            var URL = "https://jsonplaceholder.typicode.com/posts/1/comments";
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    var json = JSON.parse(this.responseText);
+                    json.forEach((e) => document.getElementById("myTable").innerHTML += "<tr><td>" + e.email + "</td></tr>")
+                }
+            };
+            xhttp.open("GET", URL, true);
+            xhttp.send();
+        }
+
+        getEmails1();
+
+        /*20.Pentru formularul de contact de la exercitiul de HTML si CSS implementati o functie ce va fi apelata la click 
+        pe butonul Submit si care va face o cerere AJAX catre un server de Firebase(va fi nevoie sa creati un proiect nou in 
+        firebase)*/
+
+       /* vezi implementarea in formular*/
+     /*  
+       function submit() {
+            var URL = "https://recapitulare-c88c9.firebaseio.com/.json";
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+
+            };
+            xhttp.open("post", URL, true);
+            var formular = {
+                name: document.querySelector("[name='name']").value,
+                email: document.querySelector("[name='email']").value,
+                subject: document.querySelector("[name='subject']").value,
+                mesaj:document.querySelector("[name='mesaj']").value
+            }
+
+            xhttp.send(formular);
+        }
+
+        submit();*/
+
+
+    </script>
+
+</head>
+
+<body>
+    <table id="myTable">
+
+    </table>
+
+
+</body>
+
+</html>

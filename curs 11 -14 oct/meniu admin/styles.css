@@ -2,11 +2,35 @@ body{
     background-color:#cce6ff;
 }
 
-#butonContact{
-    margin-left: 46%;
+h1{
+    color: RGB(85,26,140);
+}
+
+#butonAdd{
+    margin-left: 83%;
     color: white;
     background-color: #66b5ff;
-    width: 70px;
+    width: 170px;
+    height: 30px;
+    border: none;
+    border-radius: 7px;
+    font-size: 15px;
+}
+
+#butonAdaugaPreparat{
+    color: white;
+    background-color: #66b5ff;
+    width: 170px;
+    height: 30px;
+    border: none;
+    border-radius: 7px;
+    font-size: 15px;
+}
+
+#butonSalveazaPreparat{
+    color: white;
+    background-color: #66b5ff;
+    width: 170px;
     height: 30px;
     border: none;
     border-radius: 7px;
@@ -32,20 +56,50 @@ body{
     font-weight: bold;
 }
 
-.adetalii{
+.aEdit{
         color: white;
         cursor: pointer;
         text-decoration: none;
 }
 
-.detaliiPreparat{
+.butonEdit{
+    color: white;
+    background-color: #66b5ff;
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 7px;
+    font-size: 15px;
+}
+
+
+.butonDelete{
     background-color: red;
-    width: 70px;
+    width: 100px;
     height: 30px;
     border: none;
     border-radius: 7px;
     font-size: 15px;
     }
+
+#da{
+    color: white;
+    background-color: #66b5ff;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 7px;
+    font-size: 15px;   
+}
+
+#nu{
+    background-color: red;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 7px;
+    font-size: 15px;
+}
 
 #idMeniu{
     background-color: red;
@@ -70,4 +124,9 @@ body{
     font-size: 15px;
     color:white;
     margin-left: 470px; 
+}
+
+.paragrafDelete{
+    font-weight: bold;
+    font-size: 25px;
 }

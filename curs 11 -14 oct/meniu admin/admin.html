@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="styles.css"></link>
+    <script src="adminScript.js"></script>
+</head>
+
+<body onload="onLoad()" style="padding: 30px 150px;">
+
+      <span> 
+          <h1 style="display: inline">Cald si bun (Admin)</h1>   <a href= "add.html" style="text-decoration:none"> <button id="butonAdd">Adauga reteta noua</button> </a>
+        
+      </span>
+
+
+    <br/>
+<div style= "display:none" id="input_wrapper">
+            <input type="text" id="ingrediente" />
+            <button onclick="cautaIngrediente()"id="cautaIngrediente" >Cauta ingrediente</button>
+            
+    </div>
+<br/>
+    <table>
+     
+            <tbody id="tbody"> </tbody>
+    </table>
+</body>
+
+</html>

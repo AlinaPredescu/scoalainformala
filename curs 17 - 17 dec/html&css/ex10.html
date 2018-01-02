@@ -1,0 +1,86 @@
+<!--Creati un formular de contact, ca in exemplul de mai jos:-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <script>
+           function submit() {
+            var URL = "https://recapitulare-c88c9.firebaseio.com/.json";
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+
+            };
+            xhttp.open("post", URL, true);
+            var formular = {
+                name: document.querySelector("[name='name']").value,
+                email: document.querySelector("[name='email']").value,
+                subject: document.querySelector("[name='subject']").value,
+                mesaj:document.querySelector("[name='mesaj']").value
+            }
+
+            xhttp.send(JSON.stringify(formular));
+        }
+
+    
+        </script>
+    
+    <style>
+    #detalii{
+        float: left;
+        margin-left: 30%;
+      
+    }
+
+    .input{
+        border-radius:10px;
+        height: 25px;
+    }
+    #mesaj{
+        float: right;
+        margin-right: 30%;
+        display: inline-block;
+      
+    }
+
+    #buton{
+        width: 40%;
+        margin-left: 30%;
+        margin-right: 30%;       
+       border-radius:10px;
+        background-color: red;
+        height: 32px;
+        color:white;
+        font-weight: bold;
+    }
+
+    #casutaText{
+        border-radius: 10px;
+    }
+
+    #titlu{
+        font-size: 30px;
+        color: #7E7A7A;
+    }
+    </style>
+</head>
+
+<body style="background-color:#C9C5C5">
+    <center id="titlu">Elegant Contact Form</center>
+<br/>
+    <div id="detalii">
+    <input class="input" type="text" placeholder=" Name" name="name"><br/><br/>
+    <input class="input" type="text" placeholder=" Email address" name="email"><br/><br/>
+    <input class="input" type="text" placeholder=" Subject" name="subject"><br/><br/>
+    </div>
+
+    <div id="mesaj">
+    <textarea id="casutaText" cols="45" rows="8" placeholder="Message" name="mesaj"> </textarea>
+    </div>
+    <br/><br/><br/><br/><br/><br/>
+<button id="buton" onclick="submit()">Submit </button>
+
+</body>
+
+</html>

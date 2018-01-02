@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="styles.css"></link>
+   <script>
+   function myMap() {
+    var mapOptions = {
+        center: new google.maps.LatLng(44.413891, 26.096475),
+        zoom: 10,
+        mapTypeId: google.maps.MapTypeId.HYBRID
+    }
+var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+}
+   </script>
+
+<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script> 
+
+</head>
+
+<body onload="myMap()">
+
+        <span> 
+                <h1 style="display: inline">Cald si bun</h1>   <a href = "meniuPreparate.html"><button id="idMeniu1">Meniu</button></a>
+              
+            </span>
+        
+       
+    <br/>
+       <p>Sepcari 16, Centrul Vechi, București</p>
+       <br/>
+
+       <div id="map" style="width:700px;height:500px"></div>
+</body>
+
+</html>
