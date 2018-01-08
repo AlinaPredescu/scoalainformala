@@ -1,0 +1,30 @@
+<!--Scrie un program JavaScript pentru a elimina un caracter dintr-un sir dat si apoi returneaza noul sir.
+     Exemplu: JavaScript, eliminam s si va rezulta Javacript-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script> 
+
+        function eliminaCaracter(s, c) {
+            var result = "";
+            for(var i=0; i<s.length; i++) {
+               if(s[i]!=c){
+                   result=result+s[i];
+               }
+            }
+            return result;
+            }
+
+console.log(eliminaCaracter("alina", "a"));
+
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

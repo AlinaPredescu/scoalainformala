@@ -1,0 +1,46 @@
+<!--Scrie un program JavaScript care sa calculeze inmultirea si impartirea a doua numere preluate din nou 
+    inputuri.-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script> 
+
+        function produs() {
+            var number1 = document.getElementById("input1").value;
+            var number2 = document.getElementById("input2").value;
+            var c = number1*number2;
+            return document.getElementById("result").innerHTML = c;
+        }
+
+        function impartire() {
+            var number1 = document.getElementById("input1").value;
+            var number2 = document.getElementById("input2").value;
+            var c = number1/number2;
+            return document.getElementById("result").innerHTML = c;
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    1st Number
+    <input id="input1">
+    <br/>
+    <br/> 2nd Number
+    <input id="input2">
+    <br/>
+    <br/>
+
+    <button onclick="produs()">Multiply </button>
+    <button onclick="impartire()">Divide </button>
+
+    <p>The result is:</p>
+    <br/>
+    <p id="result"></p>
+</body>
+
+</html>

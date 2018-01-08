@@ -4,10 +4,10 @@
 <head>
     <title>BuBuzland</title>
     <link rel="stylesheet" href="styles.css"></link>
-    <script src="script.js"></script>
+    <script src="adminScript.js"></script>
 </head>
 
-<body>
+<body onload="onLoad()">
     <header>
         <br/>
         <p id="titlu"> <a href="index.html">Bubuzland </a> </p>
@@ -25,9 +25,14 @@
  <table>
      <tr>
          <td width=70%> <h1><b>Gestionare produse </b></h1></td>
-         <td  width=50%><button id="buton2"> + ADAUGA PRODUS NOU</button></td>
+         <td  width=50%><button id="buton2"> <a href="add.html">+ ADAUGA PRODUS NOU</a></button></td>
      </tr>
  </table>
+
+ <div class="container" id="container_produse">
+       
+
+    </div>
    
 </body>
 

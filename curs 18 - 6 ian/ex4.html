@@ -1,0 +1,31 @@
+
+<!--Scrie un program JavaScript pentru a inversa literele dintr-un sir de caractere si verifica daca este 
+    palindrom. Exemplu: pentru cuvantul code rezultatul va fi edoc nu este palindrom, capac inversat este capac si este palindrom -->
+    <!DOCTYPE html>
+<html>
+
+<head>
+    <script> 
+
+function palindrom(a) {
+    var b = a + "";
+    var invers = "";
+    for (var i = 0; i < b.length; i++) {
+        invers = b[i] + invers;
+    }
+    if (b === invers) {
+        return true;
+    } else { return false; }
+}
+
+console.log(palindrom("capac"));
+
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
