@@ -2,8 +2,9 @@ function adaugaProdus() {
     var URL = "https://magazinonlinealina1.firebaseio.com/produse.json";
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
-/*window.location="admin.html"*/
-window.alert("produs adaugat");
+        if (this.readyState == 4 && this.status == 200){
+window.location="admin.html";}
+
     };
     xhttp.open("post", URL, true);
     var formular = {

@@ -26,8 +26,8 @@ function drawProduse(list){
                     <img src="${produs.url}" class="imagine">
                     <br/>
                     &nbsp &nbsp &nbsp Pret:${produs.pret} RON &nbsp &nbsp &nbsp <button class="buton3" type="button">
-                    <a href="edit.html">Modifica</a></button> &nbsp &nbsp &nbsp <button class="buton3" type="button">
-                   <a href="delete.html"> Sterge</a></button>
+                    <a href="edit.html?idProdus=${menuKeys[i]}">Modifica</a></button> &nbsp &nbsp &nbsp <button class="buton3" type="button">
+                   <a href="delete.html?idProdus=${menuKeys[i]}"> Sterge</a></button>
                 </p>
                 </div>
                 `

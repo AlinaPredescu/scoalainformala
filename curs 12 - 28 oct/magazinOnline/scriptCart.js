@@ -104,7 +104,7 @@ function verificaStoc(url,idCantitate,cantitate){
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             // Typical action to be performed when the document is ready:
-            if(cantitate<= xhttp.responseText){
+            if(cantitate<= parseInt(this.responseText)){
                 makePutFirebase("https://magazinonlinealina1.firebaseio.com/shoppingCart/"+idCantitate+"/cantitate.json",cantitate);}
                 else {
                     alert("Stoc epuizat!");
