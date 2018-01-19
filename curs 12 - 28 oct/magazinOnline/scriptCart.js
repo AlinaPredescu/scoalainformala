@@ -82,7 +82,7 @@ total+=lista_produse[i].cantitate*lista_produse[i].pret
     html = html + `
         </table>
     `;
-
+updateCos(lista_produse);
     document.getElementById("lista_produse").innerHTML=html;
 }
 
