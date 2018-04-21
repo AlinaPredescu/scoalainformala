@@ -1,0 +1,28 @@
+<head>
+    
+<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyA_PWV6BL1wADUGmzptBmzlI5t9XkYc7_s",
+    authDomain: "eye-tracker.firebaseapp.com",
+    databaseURL: "https://eye-tracker.firebaseio.com",
+    projectId: "eye-tracker",
+    storageBucket: "eye-tracker.appspot.com",
+    messagingSenderId: "1084898806602"
+  };
+  firebase.initializeApp(config);
+</script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+   
+    <form onsubmit="login(event);">
+        Username: <input type="text" name="usrname" id="username"><br>
+        Password: <input type="password" name="password" id="password"><br>
+        <input type="submit"/>
+      </form>
+</body>
+
+</html>

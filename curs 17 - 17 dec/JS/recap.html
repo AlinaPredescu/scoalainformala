@@ -2,7 +2,8 @@
 
 <head>
     <script>
-        /*1. Implementati o functie JavaScript care primeste ca si parametru un numar si returneaza true daca numarul este par si fals daca este impar.*/
+        /*1. Implementati o functie JavaScript care primeste ca si parametru un numar si returneaza true daca 
+        numarul este par si fals daca este impar.*/
 
         function isImpar(n) {
             if (n % 2 == 1) {
@@ -26,11 +27,12 @@
 
         console.log(max(4, 5));
 
-        /*3. Implementati o functie JavaScript care primeste ca si parametru un array(sir de numere) si returneaza maximul din acel array.
+        /*3. Implementati o functie JavaScript care primeste ca si parametru un array(sir de numere) si 
+        returneaza maximul din acel array.
 */
         function maxArr(arr) {
             var maxim = arr[0];
-            for (var i = 1; i < arr.length; i++) {
+            for (var i = 0; i < arr.length; i++) {
                 if (maxim < arr[i]) {
                     maxim = arr[i]
                 }
@@ -49,7 +51,8 @@
 
         console.log(suma(6, 5));
 
-        /*5.Implementati o functie JavaScript care primeste ca si parametru un array(sir de numere) si returneaza suma tuturor numerelor din acel array.*/
+        /*5.Implementati o functie JavaScript care primeste ca si parametru un array(sir de numere) si 
+        returneaza suma tuturor numerelor din acel array.*/
 
         function sumaArr(arr) {
             var a = 0;
@@ -70,7 +73,8 @@
 
         console.log(produs(6, 5));
 
-        /*7.Implementati o functie JavaScript care primeste ca si parametru un array(sir de numere) si returneaza produsul tuturor numerelor din acel array.*/
+        /*7.Implementati o functie JavaScript care primeste ca si parametru un array(sir de numere) si
+         returneaza produsul tuturor numerelor din acel array.*/
         function produsArr(arr) {
             var a = 1;
             for (var i = 0; i < arr.length; i++) {
@@ -81,8 +85,8 @@
 
         console.log(produsArr([6, 6]));
 
-        /*8.Implementati o functie JavaScript care primeste ca si parametru un array(sir de numere) si returneaza media 
-        aritmetica a lor(suma numerelor / nr elementelor).*/
+        /*8.Implementati o functie JavaScript care primeste ca si parametru un array(sir de numere) si returneaza 
+        media aritmetica a lor(suma numerelor / nr elementelor).*/
 
         function average(arr) {
             var a = 0;
